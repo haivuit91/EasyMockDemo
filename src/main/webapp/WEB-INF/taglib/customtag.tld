@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+ <tlib-version>1.0</tlib-version>
+ <short-name>customtag</short-name>
+ <uri>http://www.btc.customer.com.vn/taglib</uri>
+ 	<!-- Show pagging information -->
+ 	<tag>
+ 		<name>PaggingInfo</name>
+ 		<tag-class>com.vn.ld.btc.fe.util.PaggerTagObjectInfo</tag-class>
+ 		<body-content>JSP</body-content>
+ 		<attribute>
+ 			<name>pagingInfo</name>
+ 			<required>true</required>
+ 			<rtexprvalue>true</rtexprvalue>
+ 		</attribute>
+ 		<attribute>
+ 			<name>navAction</name>
+ 			<required>true</required>
+ 			<rtexprvalue>true</rtexprvalue>
+ 		</attribute>
+ 		<attribute>
+ 			<name>fromId</name>
+ 			<required>true</required>
+ 			<rtexprvalue>true</rtexprvalue>
+ 		</attribute>
+ 		<attribute>
+ 			<name>actionName</name>
+ 			<required>true</required>
+ 			<rtexprvalue>true</rtexprvalue>
+ 		</attribute>
+ 	</tag>
+ 	
+ 	<!-- Menu tags lib -->
+ 	<tag>
+ 		<name>MenuInfo</name>
+ 		<tag-class>com.vn.ld.btc.fe.util.MenuTagObjectInfo</tag-class>
+ 		<body-content>JSP</body-content>
+ 	</tag>
+</taglib>

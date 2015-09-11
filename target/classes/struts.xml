@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.custom.i18n.resources" value="btc-frontend-config"/> 	
+ 	<constant name="struts.devMode" value="false" />
+ 	
+	<!-- Define default-web package: struts-default -->
+	<package name="default-web" namespace="/" extends="json-default">
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" default="true"/>
+		</result-types>	
+	</package>
+	<!-- ===== Include Web Module Configuration ===== -->
+	<include file="struts-action-config.xml"/>
+	<constant name="struts.multipart.maxSize" value="53477376" />
+</struts>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<!-- Account -->
+	<definition name="Admin.Login.Success" extends="Default.Web">
+		<put-attribute name="body" value="/webpages/system/main_system.jsp" />
+	</definition>
+	<definition name="Account.Register.Customer.NewCustomer" extends="Default.Web">
+		<put-attribute name="body" value="/webpages/account/register_form.jsp" />
+	</definition>
+	<definition name="Account.Register.Customer.Success" extends="Default.Web">
+		<put-attribute name="body" value="/webpages/account/register_success.jsp" />
+	</definition>  
+	<definition name="Account.Active.New.Customer" extends="Default.Web">
+		<put-attribute name="body" value="/webpages/account/active_account_success.jsp" />
+	</definition>
+	<!-- Profile -->
+	<definition name="Profile.Index" extends="Default.Web">
+		<put-attribute name="body" value="/webpages/profile/index.jsp" />
+	</definition>
+	<definition name="Profile.Update.Confirm" extends="Default.Web">
+		<put-attribute name="body" value="/webpages/profile/updateProfileConfirm.jsp" />
+	</definition>
+	<!-- Deposit -->
+	<definition name="Deposit.Index" extends="Default.Web">
+		<put-attribute name="body" value="/webpages/deposit/index.jsp" />
+	</definition>  
+	<definition name="Deposit.Confirm" extends="Default.Web">
+		<put-attribute name="body" value="/webpages/deposit/depositConfirm.jsp" />
+	</definition>  
+	<definition name="Deposit.History" extends="Default.Web">
+		<put-attribute name="body" value="/webpages/deposit/depositHistory.jsp" />
+	</definition>
+	
+	<!-- Withdrawal -->   
+	<definition name="Withdrawal.Index" extends="Default.Web">
+		<put-attribute name="body" value="/webpages/withdrawal/index.jsp" />
+	</definition>  
+	<definition name="Withdrawal.Confirm" extends="Default.Web">
+		<put-attribute name="body" value="/webpages/withdrawal/withdrawalConfirm.jsp" />
+	</definition>
+	<definition name="Withdrawal.History" extends="Default.Web">
+		<put-attribute name="body" value="/webpages/withdrawal/withdrawalHistory.jsp" />
+	</definition>
+</tiles-definitions>

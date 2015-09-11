@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+		
+		<bean id="rsCustomerServices"  class="com.vn.ld.api.client.ClientFactory" factory-method="getRsCustomerService" >
+			<constructor-arg value="http://localhost:8080/btc-user-service" />
+		</bean>
+		<bean id="transferServiceClient" class="com.vn.ld.api.client.ClientFactory" factory-method="getTransferServiceClient">
+			<constructor-arg value="http://localhost:8080/btc-transfer-service" />
+		</bean>
+		<bean id="rsOrderService"  class="com.vn.ld.api.client.ClientFactory" factory-method="getRsOrderServiceClient" >
+			<constructor-arg value="http://localhost:8080/btc-order-service" />
+		</bean>
+	</beans>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+	
+	<!-- <bean id="adminWebAction" class="com.vn.ld.btc.be.web.action.AdminWebAction" scope="prototype">
+		<property name="manager" ref="adminManager" />
+	</bean> -->
+	
+	<bean id="orderWebAction" class="com.vn.ld.btc.fe.web.action.OrderWebAction" scope="prototype">
+		<property name="orderManager" ref="orderManager"></property>
+	</bean>
+	
+	<bean id="accountWebAction" class="com.vn.ld.btc.fe.web.action.AccountWebAction" scope="prototype">
+		<property name="adminManager" ref="accountManager"></property>
+		<property name="authencationUser" ref="AuthenticationService"></property>
+	</bean>
+</beans>

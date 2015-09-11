@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="Admin" namespace="/admin" extends="default-web">
+		<action name="admin-login-success" class="accountWebAction" method="adminLoginSuccess">
+			<result name="success">Admin.Login.Success</result>
+		</action>
+		<action name="user-login-system" class="accountWebAction" method="userLoginSystem">
+			<result name="success" type="json">Admin.Login.Success</result>
+		</action>
+		<action name="user-logout-system" class="accountWebAction" method="userLogOutSystem">
+			<result name="success" type="json">Admin.Login.Success</result>
+		</action>
+	</package>
+	<package name="Order" namespace="/order" extends="default-web">
+		<action name="customer-order" class="orderWebAction" method="initOrderScreen">
+			<result name="success">Admin.Login.Success</result>
+		</action>
+		<action name="place-order" class="orderWebAction" method="customerPlaceOrder">
+			<result name="success" type="json">Admin.Login.Success</result>
+		</action>
+		<action name="order-change-symbol" class="orderWebAction" method="customerChangeSymbolData">
+			<result name="success" type="json">Admin.Login.Success</result>
+		</action>
+		<action name="order-sell-fee" class="orderWebAction" method="getFeeOrder">
+			<result name="success" type="json">Admin.Login.Success</result>
+		</action>
+	</package>
+	<package name="Account" namespace="/account" extends="default-web">
+		<action name="register" class="accountWebAction" method="initFromRegisterCustomer">
+			<result name="success">Account.Register.Customer.NewCustomer</result>
+		</action>
+		<action name="customer-registration" class="accountWebAction" method="customerRegistration">
+			<result name="success">Account.Register.Customer.Success</result>
+			<result name="error">Account.Register.Customer.NewCustomer</result>
+		</action>
+		<action name="comfirm-active-account" class="accountWebAction" method="customerComfirmRegistration">
+			<result name="success">Account.Active.New.Customer</result>
+		</action>
+		<action name="captcha-confirm" class="accountWebAction" method="captchaConfirm">
+			<result name="success" type="json">Account.Register.Customer.Success</result>
+		</action>
+		<action name="generate-qrcode" class="accountWebAction" method="generateBarcode">
+			<result name="success" type="json">Admin.Login.Success</result>
+		</action>
+		<action name="verify-code" class="accountWebAction" method="verifyCode">
+			<result name="success" type="json">Admin.Login.Success</result>
+		</action>
+		<action name="disable-gauth" class="accountWebAction" method="disableGoogleAuth">
+			<result name="success" type="json">Admin.Login.Success</result>
+		</action>
+	</package>
+	
+	<package name="Profile" namespace="/profile" extends="default-web">
+		<action name="index" class="profileWebAction" method="index">
+			<result name="success">Profile.Index</result>
+		</action>
+		<action name="update-profile" class="profileWebAction" method="updateProfile">
+			<result name="success">Profile.Update.Confirm</result>
+		</action>
+		<action name="update-profile-confirm" class="profileWebAction" method="updateProfileConfirm">
+			<result name="success">Profile.Index</result>
+		</action>
+	</package>
+	
+	<package name="Deposit" namespace="/deposit" extends="default-web">
+		<action name="index" class="depositWebAction" method="index">
+			<result name="success">Deposit.Index</result>
+		</action>
+		<action name="deposit-submit" class="depositWebAction" method="depositSubmit">
+			<result name="success">Deposit.Index</result>
+			<result name="error">Deposit.Index</result>
+		</action>
+		<action name="deposit-confirm" class="depositWebAction" method="depositConfirm">
+			<result name="success">Deposit.Confirm</result>
+			<result name="error">Deposit.Index</result>
+		</action>
+		<action name="history" class="depositWebAction" method="depositHistory">
+			<result name="success">Deposit.History</result>
+			<result name="error">Deposit.History</result>
+		</action>
+		<action name="cancel" class="depositWebAction" method="cancelDepositAjax">
+			<result name="success" type="json" />
+			<result name="error" type="json" />
+		</action>
+	</package>
+	
+	<package name="Withdrawal" namespace="/withdrawal" extends="default-web">
+		<action name="index" class="withdrawalWebAction" method="index">
+			<result name="success">Withdrawal.Index</result>
+		</action>
+		<action name="withdrawal-submit" class="withdrawalWebAction" method="withdrawalSubmit">
+			<result name="success">Withdrawal.Index</result>
+			<result name="error">Withdrawal.Index</result>
+		</action>
+		<action name="withdrawal-confirm" class="withdrawalWebAction" method="withdrawalConfirm">
+			<result name="success">Withdrawal.Confirm</result>
+			<result name="error">Withdrawal.Index</result>
+		</action>
+		<action name="history" class="withdrawalWebAction" method="withdrawalHistory">
+			<result name="success">Withdrawal.History</result>
+			<result name="error">Withdrawal.History</result>
+		</action>
+		<action name="cancel" class="withdrawalWebAction" method="cancelWithdrawalAjax">
+			<result name="success" type="json" />
+			<result name="error" type="json" />
+		</action>
+	</package>
+</struts>
